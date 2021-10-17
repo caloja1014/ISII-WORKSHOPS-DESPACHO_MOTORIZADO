@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>ISII-WORKSHOPS-DESPACHO_MOTORIZADO</name>
+	<comment></comment>
+	<projects>
+		<project>ec.edu.espol.workshops</project>
+		<project>lib</project>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+</projectDescription>
