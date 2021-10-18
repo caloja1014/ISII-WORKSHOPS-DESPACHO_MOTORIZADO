@@ -1,7 +1,5 @@
 package ec.edu.espol.workshops;
 
-import ejemploS.MaritalStatus;
-import ejemploS.Sex;
 
 enum Sex {
 	MALE, FEMALE
@@ -15,9 +13,15 @@ public class CarInsurance {
 	private int basePremium;
 	private Sex sex;
 	private MaritalStatus maritalStatus;
-
-	public CarInsurance() {
+	private int age;
+	
+	public CarInsurance(Sex sex, MaritalStatus maritalStatus, int age) {
+		
+		this.sex = sex;
+		this.maritalStatus = maritalStatus;
+		this.age = age;
 		this.basePremium = 500;
+		
 	}
 
 	public int getBasePremium() {
@@ -43,4 +47,25 @@ public class CarInsurance {
 	public void setMaritalStatus(MaritalStatus maritalStatus) {
 		this.maritalStatus = maritalStatus;
 	}
+	
+	
+	
+	public void setPremiumIns() {
+		if (this.age>=80) this.basePremium = -1;
+		else {
+			if(this.sex.equals(Sex.MALE) && 
+				this.maritalStatus.equals(MaritalStatus.NOTMARRIED) &&
+				this.age < 25){	
+				this.basePremium += 1500;
+	
+			}if(this.sex.equals(Sex.FEMALE) || 
+					this.maritalStatus.equals(MaritalStatus.MARRIED)) {
+				this.basePremium -= 200;
+			
+			}if(this.age >= 45 && this.age<65)
+				this.basePremium -=100;
+
+		}
+	}	
+	
 }
