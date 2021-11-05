@@ -47,7 +47,7 @@ public class Main {
 	}
 	/*
 	 * Age: 20
-	 * Sex: Male
+	 * Sex: Malej
 	 * Martial Status: Not Married
 	 */
 	public static void test1(CarInsurance ci) {
