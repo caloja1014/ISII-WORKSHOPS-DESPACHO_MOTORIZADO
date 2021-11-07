@@ -16,6 +16,10 @@ public class CarInsurance {
 	private MaritalStatus maritalStatus;
 	private int age;
 	
+	public CarInsurance() {
+		this.basePremium = 500;
+	}
+	
 	/**
 	 * 
 	 * @param sex

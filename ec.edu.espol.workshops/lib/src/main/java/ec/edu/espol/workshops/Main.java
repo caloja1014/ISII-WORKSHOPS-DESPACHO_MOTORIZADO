@@ -15,7 +15,6 @@ public class Main {
 		for (int i=0; i<3;i++) {
 			System.out.println("Enter your age");
 			int age = scanObj.nextInt();
-			
 			System.out.println("Enter your sex M for Male and F for Female");
 			scanObj.nextLine();
 			String sex = scanObj.nextLine().toUpperCase(Locale.getDefault());
