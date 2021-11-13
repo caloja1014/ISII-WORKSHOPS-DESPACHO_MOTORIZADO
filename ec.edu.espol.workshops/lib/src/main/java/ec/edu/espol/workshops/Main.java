@@ -14,21 +14,42 @@ public class Main {
 		Scanner scanObj = new Scanner(System.in,"utf-8");
 		for (int i=0; i<3;i++) {
 			System.out.println("Enter your age");
-			int age = scanObj.nextInt();
+			int age;
+			try {
+				 age= scanObj.nextInt();
+			}catch (Exception e) {
+				Main.printPremium(-1);
+				return;
+			}
 			System.out.println("Enter your sex M for Male and F for Female");
 			scanObj.nextLine();
 			String sex = scanObj.nextLine().toUpperCase(Locale.getDefault());
-			Sex s = sex.equals("M") ? Sex.MALE : Sex.FEMALE;
+			
+			Sex s;
+			if (sex.equals("M")) {
+				s=Sex.MALE;
+			}else if(sex.equals("F")) {
+				s=Sex.FEMALE;
+			}else {
+				Main.printPremium(-1);return;
+			}
+
 			
 			System.out.println("Are you married or not? (Y)/(N)");
 			String isMarried = scanObj.nextLine().toUpperCase(Locale.getDefault());
-			MaritalStatus marrSt = "Y".equals(isMarried) ? MaritalStatus.MARRIED : MaritalStatus.NOTMARRIED;
-			
+			MaritalStatus marrSt;
+			if (isMarried.equals("Y")) {
+				marrSt=MaritalStatus.MARRIED;
+			}else if(isMarried.equals("N")) {
+				marrSt=MaritalStatus.NOTMARRIED;
+			}else {
+				Main.printPremium(-1);return;
+			}			
 			CarInsurance ci = new CarInsurance(s,marrSt,age);
 			ci.setPremiumIns();
 			
 			int premium = ci.getBasePremium();
-			System.out.println("The value of your premium is "+premium);
+			Main.printPremium(premium);
 			
 			switch (i) {
 			case 0:
@@ -43,6 +64,9 @@ public class Main {
 			}
 		}
 		scanObj.close();
+	}
+	public static void printPremium(int premium) {
+		System.out.println("The value of your premium is "+premium);
 	}
 	/*
 	 * Age: 20

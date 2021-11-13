@@ -73,13 +73,14 @@ public class CarInsurance {
 	 * @apiNote Sets the premium according to person's features.
 	 */
 	public void setPremiumIns() {
-		if (this.age>=80) 
+		if (this.age>=80 || this.age<0) 
 			this.basePremium = -1;
 		else {
 			if(this.sex.equals(Sex.MALE) && 
 				this.maritalStatus.equals(MaritalStatus.NOTMARRIED) &&
 				this.age < 25){	
 				this.basePremium += 1500;
+				
 	
 			}if(this.sex.equals(Sex.FEMALE) || 
 					this.maritalStatus.equals(MaritalStatus.MARRIED)) {
