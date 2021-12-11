@@ -28,7 +28,7 @@ public class CarInsurance {
 		this.sex = sex;
 		this.maritalStatus = maritalStatus;
 		this.age = age;
-		this.basePremium = 500;
+		this.basePremium = 600;
 		
 	}
 
