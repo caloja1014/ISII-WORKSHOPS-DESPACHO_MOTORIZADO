@@ -15,7 +15,7 @@ public class StatementCoverageTest {
 		ci.setPremiumIns();
 		
 		int premium = ci.getBasePremium();
-		assertEquals(400,premium);
+		assertEquals(200,premium);
 	}
 	
 	@Test
