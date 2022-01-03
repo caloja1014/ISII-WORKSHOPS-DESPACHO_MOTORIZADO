@@ -12,7 +12,7 @@ public class BranchCoverageTest {
 		insurance.setPremiumIns();
 		
 		int premium = insurance.getBasePremium();
-		assertEquals(premium,400);
+		assertEquals(premium,200);
 	}
 	
 	@Test
