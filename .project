@@ -3,8 +3,6 @@
 	<name>ISII-WORKSHOPS-DESPACHO_MOTORIZADO</name>
 	<comment></comment>
 	<projects>
-		<project>ec.edu.espol.workshops</project>
-		<project>lib</project>
 	</projects>
 	<buildSpec>
 	</buildSpec>

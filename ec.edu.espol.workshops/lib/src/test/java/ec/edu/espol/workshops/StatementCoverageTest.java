@@ -1,5 +1,7 @@
 package ec.edu.espol.workshops;
 import org.junit.Test;
+import java.io.*;
+
 import static org.junit.Assert.assertEquals;
 public class StatementCoverageTest {
 
@@ -13,7 +15,7 @@ public class StatementCoverageTest {
 		ci.setPremiumIns();
 		
 		int premium = ci.getBasePremium();
-		assertEquals(premium,400);
+		assertEquals(400,premium);
 	}
 	
 	@Test
